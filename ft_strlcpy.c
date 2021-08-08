@@ -1,7 +1,8 @@
-#include "libft.h"
 //overrides dst with src
 //dstsize is maximum length of src -1 (because last character is '/0')
 //dstsize must not exceed memory size of dst
+#include "libft.h"
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

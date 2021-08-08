@@ -5,7 +5,7 @@ of ’s1’ and ’s2’.
 */
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char *str;
 	size_t	size;

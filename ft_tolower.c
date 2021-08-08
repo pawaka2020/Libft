@@ -1,3 +1,5 @@
+#include "libft.h"
+
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
@@ -5,8 +7,7 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
-
-#include <ctype.h>
+/*
 #include <stdio.h>
 void test(int i)
 {
@@ -22,3 +23,4 @@ int	main(void)
 	while (i < 127)
 		test(i++);
 }
+*/

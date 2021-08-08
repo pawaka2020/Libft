@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-//kinda same as ft_strchr? except with n, searching until the nth element of s)
+//kinda same as ft_strchr? except with n, searching until the nth element of s) (checked)
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;

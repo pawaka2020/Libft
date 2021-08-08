@@ -3,7 +3,7 @@ returns substring of s. First char of substring is s[start]. Maximum length of s
 return 0 if allocation fails
 */
 #include "libft.h"
-#include <stdio.h>
+
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char *sub;
@@ -25,6 +25,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	char *str = "Hello World!";

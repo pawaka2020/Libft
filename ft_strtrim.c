@@ -8,8 +8,8 @@ from the beginning and the end of the string.
 static void	flip(char *str)
 {
 	char	*str2;
-	int		len;
-	int		i;
+	int			len;
+	int			i;
 
 	len = ft_strlen(str);
 	str2 = malloc(len);

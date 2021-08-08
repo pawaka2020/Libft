@@ -10,6 +10,7 @@ Include this at the top of every ft_*.c file as well
 #include <string.h>
 #include <strings.h>
 #include <unistd.h>
+#include <ctype.h>
 //Prototypes for Libft project
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

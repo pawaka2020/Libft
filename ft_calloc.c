@@ -1,13 +1,12 @@
 /*
 allocates memory and initializes all bits to zero.
-count = number of elements, size = size of each element (according to variable type)
-test together with ft_bzero
+count = number of elements, size = size of each element (according to variable type) (TESTED)
 */
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *p;
+	void	*p;
 
 	p = malloc(count * size);
 	if (p == 0)

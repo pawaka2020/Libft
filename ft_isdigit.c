@@ -1,5 +1,5 @@
 /*
-returns 2048 if c represents characters 0 to 9, otherwise returns 0
+returns 2048 if c represents characters 0 to 9, otherwise returns 0 (checked)
 */
 #include "libft.h"
 
@@ -10,7 +10,7 @@ int	ft_isdigit(int c)
   else 
     return (0);
 }
-/*
+
 #include <ctype.h>
 #include <stdio.h>
 int main(void)
@@ -26,4 +26,3 @@ int main(void)
     c++;
   }
 }
-*/

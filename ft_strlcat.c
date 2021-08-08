@@ -1,20 +1,10 @@
-#include "libft.h"
 //adds src to end of dst.
 //size is the size of the combined string. 
 //size must not exceed the allocated memory for dst
-// size_t ft_strlen(const char *s)
-// {
-//   size_t i;
+#include "libft.h"
 
-//   i = 0;
-//   while (s[i])
-//   { 
-//     i++;
-//   }
-//   return (i);
-// }
-
-size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize){
+size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+{
 	char	*d;
 	char	*s;
 	unsigned int	n;

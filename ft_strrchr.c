@@ -6,7 +6,7 @@ like strchr.c but finds the last occurence of c instead
 char *ft_strrchr(const char *s, int c)
 {
 	size_t	i;
-	size_t len;
+	size_t	len;
 
 	i = -1;
 	len = ft_strlen(s);

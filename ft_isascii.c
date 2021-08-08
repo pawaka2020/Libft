@@ -1,3 +1,7 @@
+/*
+tests for ascii characters (checked)
+#include "libft.h"
+*/
 #include "libft.h"
 
 int	ft_isascii(int c)
@@ -24,3 +28,4 @@ int	main(void)
 	test(128);
 }
 */
+

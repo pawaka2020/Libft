@@ -20,9 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-
-
+/*
 #include <stdio.h>
 int main () 
 {
@@ -49,3 +47,4 @@ int main ()
     puts(str3);
     return 0;
 }
+*/

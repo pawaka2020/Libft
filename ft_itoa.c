@@ -1,5 +1,5 @@
 /*
-converts n into string. n can also be negative
+converts n into string. n can also be negative (Chcked)
 */
 #include "libft.h"
 

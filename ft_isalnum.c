@@ -1,23 +1,7 @@
 /*
-return 8 if both ft_isalpha and ft_isdigit are true, otherwise return 0
+return 8 if both ft_isalpha and ft_isdigit are true, otherwise return 0 (CHECKED)
 */
 #include "libft.h"
-
-// int ft_isdigit(int c)
-// {
-//   if (c >= '0' && c <= '9')
-//     return (2048);
-//   else 
-//     return (0);
-// }
-
-// int ft_isalpha(int c)
-// {
-//   if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-// 		return (1024);
-// 	else 
-//     return (0);
-// }
 
 int ft_isalnum (int c)
 {

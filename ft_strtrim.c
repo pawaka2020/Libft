@@ -27,7 +27,7 @@ static void	flip(char *str)
 static int	setpos(char const *s1, char const *set)
 {
 	int	i;
-	int	j;
+	size_t	j;
 	int pos;
 
 	i = -1;
@@ -54,7 +54,7 @@ static int	setpos(char const *s1, char const *set)
 
 static void trim(char *s1, char const *set)
 {
-	int	i;
+	size_t	i;
 	int pos;
 
 	i = -1;

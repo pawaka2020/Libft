@@ -1,6 +1,7 @@
 #include "libft.h"
-//comment out isdigit later when compiling
-//use ft_isdigit from library when compiling
+/*
+returns integer from string (CHECKED)
+*/
 static int	empty(char c)
 {
 	if (c == 32 || c == '\t' || c == '\n')
@@ -10,10 +11,12 @@ static int	empty(char c)
 	else
 		return (0);
 }
+
 static int	isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
+
 int	ft_atoi(const char *str)
 {
 	long	i;
@@ -42,7 +45,7 @@ int	ft_atoi(const char *str)
 #include <stdio.h>
 int	main(void)
 {
-	char *str = "   	+--12345abc";
+	char *str = "    12345abc";
 	printf("atoi value = %d\n", atoi(str));
 	printf("ft_atoi value = %d\n", ft_atoi(str));
 }

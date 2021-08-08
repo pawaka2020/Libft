@@ -1,9 +1,9 @@
 /*
-replaces first n bytes of s array with '\0'
+replaces first n bytes of s array with '\0' (CHECKED)
 */
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char	*str;
 	size_t	i;

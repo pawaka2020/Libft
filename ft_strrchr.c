@@ -3,7 +3,7 @@ like strchr.c but finds the last occurence of c instead
 */
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 	size_t	len;
@@ -12,7 +12,7 @@ char *ft_strrchr(const char *s, int c)
 	len = ft_strlen(s);
 	while (i++, i < len)
 		if (s[len - 1 - i] == c)
-			return ((char*)s + (len - 1 - i));
+			return ((char *)s + (len - 1 - i));
 	return (0);
 }
 /*

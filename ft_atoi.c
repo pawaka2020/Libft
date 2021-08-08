@@ -12,7 +12,7 @@ static int	empty(char c)
 		return (0);
 }
 
-static int	isdigit(int c)
+static int	isdigit2(int c)
 {
 	return (c >= '0' && c <= '9');
 }
@@ -35,7 +35,7 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-	while (str[i] && isdigit(str[i]))
+	while (str[i] && isdigit2(str[i]))
 		nbr = (nbr * 10) + (str[i++] - '0');
 	if (isneg == 1)
 		return (-nbr);

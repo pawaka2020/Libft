@@ -3,12 +3,12 @@
 //size must not exceed the allocated memory for dst
 #include "libft.h"
 
-size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	char	*d;
 	char	*s;
-	unsigned int	n;
-	unsigned int	dlen;
+	int		n;
+	int		dlen;
 
 	d = (char *)dst;
 	s = (char *)src;

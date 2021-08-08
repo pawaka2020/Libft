@@ -5,10 +5,10 @@ returns 1024 if c represents an alphabet, otherwise returns 0
 
 int	ft_isalpha(int c)
 {
-  if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 		return (1024);
-	else 
-    return (0);
+	else
+		return (0);
 }
 /*
 #include <ctype.h>

@@ -2,14 +2,14 @@
 
 char	**ft_split(char const *s, char c)
 {
-	char **split;
+	char	**split;
 	int		i;
 	int		j;
-
 	int		k;
+
 	split = malloc(ft_strlen(s));
 	if (split == 0)
-		return split;
+		return (split);
 	i = -1;
 	j = -1;
 	k = 0;
@@ -24,9 +24,9 @@ char	**ft_split(char const *s, char c)
 			k++;
 		}
 	}
-	split = realloc(split, k+2);
+	split = realloc(split, k + 2);
 	split[k] = 0;
-	return(split);
+	return (split);
 }
 /*
 #include <stdio.h>

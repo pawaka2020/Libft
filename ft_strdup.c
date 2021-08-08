@@ -3,7 +3,7 @@ returns copy of s1
 */
 #include "libft.h"
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*str;
 	size_t	len;
@@ -13,7 +13,7 @@ char *ft_strdup(const char *s1)
 	if (str == 0)
 		return (str);
 	ft_strlcpy(str, s1, len + 1);
-	return (str);	
+	return (str);
 }
 /*
 #include <stdio.h>
@@ -24,4 +24,3 @@ int	main(void)
 	printf("str2 = %s\n", str2);
 }
 */
-

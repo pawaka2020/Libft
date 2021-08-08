@@ -1,6 +1,5 @@
 /*
 allocates memory and initializes all bits to zero.
-count = number of elements, size = size of each element (according to variable type) (TESTED)
 */
 #include "libft.h"
 

@@ -30,4 +30,3 @@ ft_strlcpy(str2, str, len+1);
 printf("result %s\n", str2);
 }
 */
-

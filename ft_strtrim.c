@@ -8,8 +8,8 @@ from the beginning and the end of the string.
 static void	flip(char *str)
 {
 	char	*str2;
-	int			len;
-	int			i;
+	int		len;
+	int		i;
 
 	len = ft_strlen(str);
 	str2 = malloc(len);
@@ -26,9 +26,9 @@ static void	flip(char *str)
 
 static int	setpos(char const *s1, char const *set)
 {
-	int	i;
+	int		i;
 	size_t	j;
-	int pos;
+	int		pos;
 
 	i = -1;
 	j = 0;
@@ -46,24 +46,24 @@ static int	setpos(char const *s1, char const *set)
 			pos = -1;
 			j = 0;
 		}	
-		if (j == ft_strlen(set) -1)
+		if (j == ft_strlen(set) - 1)
 			return (pos);
 	}
 	return (pos);
 }
 
-static void trim(char *s1, char const *set)
+static void	trim(char *s1, char const *set)
 {
 	size_t	i;
-	int pos;
+	int		pos;
 
 	i = -1;
 	pos = setpos(s1, set);
 	while (i++, i < ft_strlen(set))
-		ft_strlcpy(&s1[pos], &s1[pos + 1], ft_strlen(s1) -1);
+		ft_strlcpy(&s1[pos], &s1[pos + 1], ft_strlen(s1) - 1);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	char	*set2;
@@ -76,7 +76,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	trim(str, set2);
 	flip(str);
 	str = realloc(str, ft_strlen(str));
-	return (str);	
+	return (str);
 }
 /*
 #include <stdio.h>

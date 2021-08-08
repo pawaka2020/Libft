@@ -5,12 +5,12 @@ returns 2048 if c represents characters 0 to 9, otherwise returns 0 (checked)
 
 int	ft_isdigit(int c)
 {
-  if (c >= '0' && c <= '9')
-    return (2048);
-  else 
-    return (0);
+	if (c >= '0' && c <= '9')
+		return (2048);
+	else
+		return (0);
 }
-
+/*
 #include <ctype.h>
 #include <stdio.h>
 int main(void)
@@ -26,3 +26,4 @@ int main(void)
     c++;
   }
 }
+*/

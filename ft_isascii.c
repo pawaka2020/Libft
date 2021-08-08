@@ -28,4 +28,3 @@ int	main(void)
 	test(128);
 }
 */
-

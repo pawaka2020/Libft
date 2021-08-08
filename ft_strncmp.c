@@ -1,6 +1,6 @@
 /*
 scans s1 and s2 word by word from beginning.
-If there is a different value, stop scanning and return the difference between s1[i] and s2[i]
+return the difference between s1[i] and s2[i]
 scan up to nth element of s1
 */
 #include "libft.h"
@@ -8,7 +8,7 @@ scan up to nth element of s1
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (n == 0)
 		return (0);

@@ -12,8 +12,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (!s || !f)
 		return (NULL);
-	if (!(str = malloc(ft_strlen(s) + 1)))
-		return (NULL);
+	str = malloc(ft_strlen(s) + 1);
+	if (str == 0)
+		return (str);
 	i = -1;
 	while (i++, s[i])
 		str[i] = f(i, s[i]);

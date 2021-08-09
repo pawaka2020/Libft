@@ -1,0 +1,10 @@
+ft_memcmp - must use 'unsigned char *' instead of 'char *' to change 'void *' 
+ft_strchr - something about using *s instead of s[i]
+ft_strrchr - I don't know
+ft_substr
+ft_strjoin
+ft_atoi
+ft_strtrim - WRONG! MEMORY LEAK ERRORS!
+ft_itoa
+ft_putnbr_fd
+ft_split

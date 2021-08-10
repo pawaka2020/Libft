@@ -14,32 +14,6 @@ ft_memmove(((void *)0), ((void *)0), 5);
 //if dst > src 
 #include "libft.h"
 
-// void	*ft_memmove(void *dst, const void *src, size_t len)
-// {
-// 	unsigned char	*dst2;
-// 	unsigned char	*src2;
-// 	size_t	i;
-
-// 	dst2 = (unsigned char *)dst;
-// 	src2 = (unsigned char *)src;
-// 	i = 0;
-// 	if (dst == src || len == 0)
-// 		return (dst);
-// 	else if (dst > src)
-// 		while (len-- > 0)
-// 			dst2[len] = src2[len];
-// 	else
-// 	{
-// 		while (i < len)
-// 		{
-// 			dst2[i] = src2[i];
-// 			i++;
-// 		}
-// 	}
-// 	return (dst);
-// }
-
-#include <stdio.h>
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*dst2;
@@ -64,11 +38,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 /*
-void test(char *dst, char *src, size_t len)
-{
-	memmove(dst, src, len);
-	printf("After ft_memmove: %s\n", dst);
-}
+#include <stdio.h>
 int main () {
    char dest[] = "abcde";
    const char src[]  = "1234567";

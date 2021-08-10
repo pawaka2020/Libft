@@ -9,12 +9,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	i = -1;
 	if (dstsize == 0)
-		return (strlen(src));
-	while (i++, i < dstsize - 1 && src[i])
+		return (ft_strlen(src));
+	if (!src)
+		return (0);
+	while (i++, i < (dstsize - 1) && src[i])
 		dst[i] = src[i];
-	if (i < dstsize)
-		dst[i] = '\0';
-	return (strlen(src));
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
 /*
 #include <stdlib.h>

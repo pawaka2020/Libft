@@ -2,7 +2,7 @@
 
 static int	emptyspace(char c)
 {
-	if (c == ' ' || c == '\n' || c == '\t') 
+	if (c == ' ' || c == '\n' || c == '\t')
 		return (1);
 	if (c == '\v' || c == '\f' || c == '\r')
 		return (1);
@@ -10,13 +10,13 @@ static int	emptyspace(char c)
 		return (0);
 }
 
-static void adjustempty(const char *str, size_t *i)
+static void	adjustempty(const char *str, size_t *i)
 {
 	while (emptyspace(str[*i]))
 		*i += 1;
 }
 
-static void setsign(const char *str, size_t *i, int *sign)
+static void	setsign(const char *str, size_t *i, int *sign)
 {
 	if (str[*i] == '-')
 		*sign = -1;
@@ -27,7 +27,7 @@ static void setsign(const char *str, size_t *i, int *sign)
 int	ft_atoi(const char *str)
 {
 	long	nbr;
-	int	sign;
+	int		sign;
 	size_t	i;
 
 	nbr = 0;

@@ -1,5 +1,6 @@
 /*
 copies len bytes from string src to string dst, non-destructive manner.
+len must not exceed size of dst
 
 RETURN VALUES
      The memmove() function returns the original value of dst.
@@ -9,38 +10,73 @@ RETURN VALUES
 Test code:
 ft_memmove(((void *)0), ((void *)0), 5);
 */
-
+//for nondestructive copying, copy in reverse direction
+//if dst > src 
 #include "libft.h"
 
+// void	*ft_memmove(void *dst, const void *src, size_t len)
+// {
+// 	unsigned char	*dst2;
+// 	unsigned char	*src2;
+// 	size_t	i;
+
+// 	dst2 = (unsigned char *)dst;
+// 	src2 = (unsigned char *)src;
+// 	i = 0;
+// 	if (dst == src || len == 0)
+// 		return (dst);
+// 	else if (dst > src)
+// 		while (len-- > 0)
+// 			dst2[len] = src2[len];
+// 	else
+// 	{
+// 		while (i < len)
+// 		{
+// 			dst2[i] = src2[i];
+// 			i++;
+// 		}
+// 	}
+// 	return (dst);
+// }
+
+#include <stdio.h>
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*d;
-	char	*s;
-	size_t	i;
+	unsigned char		*dst2;
+	unsigned char		*src2;
 
-	d = (char *)dst;
-	s = (char *)src;
-	i = 0;
-	if (d > s)
-		while (len-- > 0)
-			d[len] = s[len];
-	else
+	if (dst == src || len == 0)
+		return (dst);
+	else if (dst < src)
 	{
-		while (i < len)
-		{
-			d[i] = s[i];
-			i++;
-		}
+		dst2 = (unsigned char *)dst;
+		src2 = (unsigned char *)src;
+		while (len--)
+			*dst2++ = *src2++;
+	}
+	else if (dst > src)
+	{
+		dst2 = (unsigned char *)dst + (len - 1);
+		src2 = (unsigned char *)src + (len - 1);
+		while (len--)
+			*dst2-- = *src2--;
 	}
 	return (dst);
 }
 /*
-#include <stdio.h>
+void test(char *dst, char *src, size_t len)
+{
+	memmove(dst, src, len);
+	printf("After ft_memmove: %s\n", dst);
+}
 int main () {
-	char str[5] = "abcde";
-	printf("str+2 = %s\n", str+2);
-	char *str2 = memmove(str+2, str, 3);
-	printf("After memcpy dest = %s\n", str);
-	printf("After memcpy, ft_memmove = %s\n", str2);
+   char dest[] = "abcde";
+   const char src[]  = "1234567";
+
+   printf("Before memmove dest = %s, src = %s\n", dest, src);
+   ft_memmove(dest, src, 5);
+   printf("After memmove dest = %s, src = %s\n", dest, src);
+
+   return(0);
 }
 */

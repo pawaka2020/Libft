@@ -13,7 +13,7 @@ ft_split
 //tester 2
 ft_memmove
 ft_strlcpy:    [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
-ft_atoi:
+ft_atoi: fixed(not taking into account max-min value of int, converting to long first then checking)
 ft_strdup
 
 also make sure you don't use forbidden functions

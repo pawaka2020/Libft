@@ -1,52 +1,60 @@
 #include "libft.h"
-/*
-returns integer from string (CHECKED)
-*/
-static int	empty(char c)
+//places index after all the empty spaces in str
+static void	adjustempty(const char *str, size_t *i)
 {
-	if (c == 32 || c == '\t' || c == '\n')
-		return (1);
-	else if (c == '\r' || c == '\v' || c == '\f')
-		return (1);
-	else
-		return (0);
-}
+	int	j;
 
-static int	isdigit2(int c)
+	j = -1;
+	while (j++, str[j])
+	{
+		if (str[j] == ' ' || str[j] == '\n' || str[j] == '\t' )
+			*i += 1;
+		else if(str[j] == '\v' || str[j] == '\f' || str[j] == '\r')
+			*i += 1;
+	}
+}
+//places index after all the '-' and '+' letters in str
+//adjusts sign as well
+static void adjustsign(const char *str, size_t *i, int *sign)
 {
-	return (c >= '0' && c <= '9');
+	if (str[*i] == '-')
+		*sign = -1;
+	if ((str[*i] == '-') || (str[*i] == '+'))
+		*i += 1;
 }
-
+//set nbr as long instead of int
+//for testing if nbr exceeds int max/min value
 int	ft_atoi(const char *str)
 {
-	long	i;
 	long	nbr;
-	int		isneg;
+	int	sign;
+	size_t	i;
 
-	i = 0;
 	nbr = 0;
-	isneg = 0;
-	while (str[i] && empty(str[i]))
-		i++;
-	if (str[i] && str[i] == '-')
+	sign = 1;
+	i = 0;
+	adjustempty(str, &i);
+	adjustsign(str, &i, &sign);
+	while ((str[i] >= '0') && (str[i] <= '9'))
 	{
-		isneg = 1;
+		nbr = (nbr * 10) + (str[i] - '0');
+		if (nbr > 2147483647 && sign == 1)
+			return (-1);
+		if (nbr > 2147483648 && sign == -1)
+			return (0);
 		i++;
 	}
-	else if (str[i] == '+')
-		i++;
-	while (str[i] && isdigit2(str[i]))
-		nbr = (nbr * 10) + (str[i++] - '0');
-	if (isneg == 1)
-		return (-nbr);
-	return (nbr);
+	return (nbr * sign);
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-	char *str = "    12345abc";
-	printf("atoi value = %d\n", atoi(str));
-	printf("ft_atoi value = %d\n", ft_atoi(str));
+	printf("for max long, atoi value = %d\n", atoi("99999999999999999999999999"));
+	printf("for max long, ft_atoi value = %d\n", ft_atoi("99999999999999999999999999"));
+	printf("for min long, atoi value = %d\n", atoi("-99999999999999999999999999"));
+	printf("for min long, ft_atoi value = %d\n", ft_atoi("-99999999999999999999999999"));
+	printf("for null, atoi value = %d\n", atoi("\0"));
+	printf("for null, ft_atoi value = %d\n", ft_atoi("\0"));
 }
 */

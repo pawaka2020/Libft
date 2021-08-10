@@ -1,5 +1,21 @@
 /*
-returns copy of s1
+ft_strdup:     [OK] [OK] [OK] [KO] [OK] [OK] [OK]
+[KO]: your strdup did not allocate the good size so the \0 test may be false
+Test code:
+char *str;
+char *tmp = "this is a normal test";
+int r_size = strlen(tmp);
+int size;
+
+str = ft_strdup(tmp);
+size = get_last_malloc_size();
+if (size == r_size + 1)
+exit(TEST_SUCCESS);
+exit(TEST_KO);
+
+Diffs:
+strdup: |22|
+ft_strdup: |21|
 */
 #include "libft.h"
 
